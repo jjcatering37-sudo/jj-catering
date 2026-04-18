@@ -778,7 +778,7 @@ body.nav-active {
 
 /* SMALL SCREEN NAVBAR */
 .nav-open-btn .line {
-  width: 25px;
+  width: 30px;
   height: 2px;
   background-color: var(--blue-coast);
   margin-block: 4px;
@@ -809,8 +809,7 @@ body.nav-active {
   /* background-color: var(--smoky-black-1); */
   background-color: white;
   top: 0;
-  /* left: -360px; */
-  left: 0;
+  left: -360px;
   bottom: 0;
   max-width: 360px;
   width: 100%;
@@ -820,15 +819,11 @@ body.nav-active {
   visibility: hidden;
   z-index: 2;
   /* transition: var(--transition-2); */
-  transition: transform 0.3s ease;
-  transform: translateX(-100%);
 }
 
 .navbar.active {
-  /* visibility: visible; */
-  /* transform: translateX(360px); */
-  transform: translateX(0);
-
+  visibility: visible;
+  transform: translateX(360px);
 }
 
 .navbar .close-btn {
