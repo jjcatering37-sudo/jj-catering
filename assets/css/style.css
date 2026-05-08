@@ -2575,3 +2575,42 @@ textarea.input-field {
   }
 
 }
+
+/*gemini feature
+*/
+/* Center buttons and remove text-swap animation */
+.service .card-content {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-btn-simple {
+  min-width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Keeps text static while background animates */
+.menu-btn-simple .text {
+  position: relative;
+  transform: none !important;
+  transition: none !important;
+}
+
+.menu-btn-simple:is(:hover, :focus-visible) .text {
+  color: var(--white);
+  /* Text turns white when the dark background slides up */
+}
+
+/* Omakase styling */
+.btn-disabled {
+  border: 2px solid var(--white-alpha-10);
+  color: var(--quick-silver);
+  cursor: not-allowed;
+}
+
+.btn-disabled::before {
+  display: none;
+}
