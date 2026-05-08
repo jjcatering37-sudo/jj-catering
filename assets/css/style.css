@@ -2578,39 +2578,49 @@ textarea.input-field {
 
 /*gemini feature
 */
-/* Center buttons and remove text-swap animation */
+/* 1. Center the button container */
 .service .card-content {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding-block: 20px;
+  /* Space between image and button */
+  width: 100%;
 }
 
+/* 2. Fix button sizing and internal centering */
 .menu-btn-simple {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-inline: auto !important;
+  /* Standard centering */
   min-width: 240px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* Uniform width for all buttons */
+  max-width: 90%;
+  /* Prevents overflow on small screens */
+  height: 50px;
 }
 
-/* Keeps text static while background animates */
-.menu-btn-simple .text {
-  position: relative;
-  transform: none !important;
-  transition: none !important;
-}
-
+/* 3. FIX: HOVER TEXT COLOR */
+/* This forces the span to turn white when you hover the button */
 .menu-btn-simple:is(:hover, :focus-visible) .text {
-  color: var(--white);
-  /* Text turns white when the dark background slides up */
+  color: var(--white) !important;
+  z-index: 5;
+  position: relative;
 }
 
-/* Omakase styling */
-.btn-disabled {
-  border: 2px solid var(--white-alpha-10);
-  color: var(--quick-silver);
-  cursor: not-allowed;
+/* Optional: Ensure the text color transitions smoothly */
+.menu-btn-simple .text {
+  color: inherit;
+  /* Starts black/dark from btn-secondary */
+  transition: color var(--transition-1);
 }
 
-.btn-disabled::before {
-  display: none;
+/* 4. Small screen specific tweak */
+@media (max-width: 575px) {
+  .menu-btn-simple {
+    min-width: 200px;
+    font-size: 1.2rem;
+  }
 }
