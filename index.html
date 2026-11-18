@@ -26,8 +26,12 @@
   <!-- 
     - favicon
   -->
-  <link rel="icon" type="image/png" href="./assets/images/jj-logo.png">
-  <link rel="apple-touch-icon" href="./assets/images/jj-logo.png">
+  <!-- <link rel="icon" type="image/png" href="./assets/images/jj-logo.png">
+  <link rel="apple-touch-icon" href="./assets/images/jj-logo.png"> -->
+
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/jj-logo.png">
+  <link rel="shortcut icon" href="./assets/images/jj-logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/jj-logo.png">
 
   <!-- Local Business Structured Data (JSON-LD for Google Rich Results) -->
   <script type="application/ld+json">
@@ -35,12 +39,27 @@
     "@context": "https://schema.org",
     "@type": "Caterer",
     "name": "J&J Catering",
+    "alternateName": [
+      "jjcatering",
+      "jjcatering sushi",
+      "J&J Sushi Catering",
+      "J&J Sushi Catering Metro Vancouver"
+    ],
     "url": "https://www.jjcatering.ca",
     "logo": "https://www.jjcatering.ca/assets/images/jj-logo.png",
     "image": "https://www.jjcatering.ca/assets/images/sashimi-platter-50.jpg",
-    "description": "Chef-crafted sushi catering, sashimi platters, office meals, and live sushi stations serving Metro Vancouver.",
+    "description": "J&J Catering (J&J Sushi Catering) provides premium chef-crafted sushi catering, corporate office lunch meals, and interactive live sushi stations across Vancouver and Metro Vancouver.",
     "servesCuisine": "Japanese, Sushi",
     "priceRange": "$$",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Catering Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corporate Office Lunch Meals & Bento Boxes" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sushi & Sashimi Party Platters" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Live Omakase Sushi Action Stations" } }
+      ]
+    },
     "areaServed": [
       { "@type": "City", "name": "Vancouver" },
       { "@type": "City", "name": "Burnaby" },
